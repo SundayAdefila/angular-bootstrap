@@ -6,6 +6,30 @@
 
   "use strict";
     
-  angular.module( "myApp", []);
-        
+  angular
+	  .module( "myApp", ['ui.router'])
+	  .config(function($stateProvider) {
+      var homeState = {
+        name: 'home',
+        url: '/',
+        templateUrl: "client/defaults/home.html"
+      }
+
+      var aboutState = {
+        name: 'about',
+        url: '/about',
+        templateUrl: "client/defaults/about.html"
+      }
+
+      var contactState = {
+        name: 'contact',
+        url: '/contact',
+        templateUrl: "client/defaults/contact.html"
+      }
+
+      $stateProvider.state(homeState);
+      $stateProvider.state(aboutState);
+      $stateProvider.state(contactState);
+    });
+	        
 })();

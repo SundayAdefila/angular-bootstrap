@@ -6,6 +6,7 @@
 
 	<link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./bower_components/bootswatch/cyborg/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./client/stylesheets/main.css">
 </head>
 <body>
 
@@ -19,28 +20,31 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">{{app_title}}</a>
+        <a class="navbar-brand" ui-sref="home">{{app_title}}</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+          <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+          <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
 
 
-	<div></div>
+	<div class="container-fluid">
+		<div ui-view></div>
+	</div>
 
 <!-- scripts -->
 <!-- jQuery -->
-<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <!-- bootstrap -->
-<script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Angular Library -->
 <script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <!-- Angular Module -->
 <script src="./client/javascripts/app/app.module.js"></script>
 <!-- Angular Controller -->
