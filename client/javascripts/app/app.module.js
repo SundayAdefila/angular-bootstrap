@@ -11,7 +11,7 @@
 	  .config(function($stateProvider) {
       var homeState = {
         name: 'home',
-        url: '/',
+        url: '',
         templateUrl: "client/defaults/home.html"
       }
 
@@ -30,6 +30,8 @@
       $stateProvider.state(homeState);
       $stateProvider.state(aboutState);
       $stateProvider.state(contactState);
+      $stateProvider.state("otherwise", { url : ''})
+
     });
 	        
 })();
